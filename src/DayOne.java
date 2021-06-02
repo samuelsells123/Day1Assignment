@@ -8,46 +8,61 @@ public class DayOne {
 		int select = 0;
 		
 		while(select != 13) {
+			System.out.println("Day 1 - Assignment:\r\n"
+					+ "-----------------------------------------------------\r\n"
+					+ "1. WAP to accept a isbn,name, author,price, no of copies printed from user and print them using method?\r\n"
+					+ "2. Compute Quotient and Remainder for provided number.\r\n"
+					+ "3. Swap two numbers using temporary variable\r\n"
+					+ "4.  Swap two numbers without using temporary variable\r\n"
+					+ "5. Check whether an alphabet is vowel or consonant using if..else statement\r\n"
+					+ "6. Check whether an alphabet is vowel or consonant using switch statement\r\n"
+					+ "7. Java Program to Check a Leap Year\r\n"
+					+ "8. Check if a Number is Positive or Negative using if else\r\n"
+					+ "9. Prime Numbers Between Two Integers\r\n"
+					+ "10.  Program to calculate power using recursion\r\n"
+					+ "11. Program to count vowels, consonants, digits, and spaces\r\n"
+					+ "12. Write a constructor in the Car class given below that initializes the brand class field with the string “Ford”." + "\n");
+			
 			System.out.print("Choose a problem from 1-12, or 13 to exit: ");
 			
 			select = scan.nextInt();
 			
 			switch(select) {
 				case 1:
-					DayOne.Problem1();
+					DayOne.problem1();
 					break;
 				case 2:
-					DayOne.Problem2();
+					DayOne.problem2();
 					break;
 				case 3:
-					DayOne.Problem3();
+					DayOne.problem3();
 					break;
 				case 4:
-					DayOne.Problem4();
+					DayOne.problem4();
 					break;
 				case 5:
-					DayOne.Problem5();
+					DayOne.problem5();
 					break;
 				case 6:
-					DayOne.Problem6();
+					DayOne.problem6();
 					break;
 				case 7:
-					DayOne.Problem7();
+					DayOne.problem7();
 					break;
 				case 8:
-					DayOne.Problem8();
+					DayOne.problem8();
 					break;
 				case 9:
-					DayOne.Problem9();
+					DayOne.problem9();
 					break;
 				case 10:
-					DayOne.Problem10();
+					DayOne.problem10();
 					break;
 				case 11:
-					DayOne.Problem11();
+					DayOne.problem11();
 					break;
 				case 12:
-					DayOne.Problem12();
+					DayOne.problem12();
 					break;
 				case 13:
 					System.out.println("\n" + "Exiting...");
@@ -60,7 +75,7 @@ public class DayOne {
 		scan.close();
 	}
 	
-	public static void Problem1() {
+	public static void problem1() {
 		System.out.println("\n" + "Book Entry" + "\n");
 		scan.nextLine();
 		
@@ -79,7 +94,7 @@ public class DayOne {
 								+ "# copies: " + numCopies + "\n");
 	}
 	
-	public static void Problem2() {
+	public static void problem2() {
 		System.out.println("\n" + "Quotient & Remainder" + "\n");
 		
 		System.out.print("Input Dividend: ");
@@ -91,7 +106,7 @@ public class DayOne {
 								+ "Remainder: " + (d1 % d2) + "\n");
 	}
 	
-	public static void Problem3() {
+	public static void problem3() {
 		System.out.println("\n" + "Number Swap w/ Temporary Variable" + "\n");
 		
 		System.out.print("Input Integer #1: ");
@@ -112,7 +127,7 @@ public class DayOne {
 								+ "Number 2: " + num2 + "\n");
 	}
 	
-	public static void Problem4() {
+	public static void problem4() {
 		System.out.println("\n" + "Swap w/ No Temporary Variable" + "\n");
 		
 		System.out.print("Input Integer #1: ");
@@ -133,7 +148,7 @@ public class DayOne {
 								+ "Number 2: " + num2 + "\n");
 	}
 	
-	public static void Problem5() {
+	public static void problem5() {
 		System.out.println("\n" + "Check Vowel w/ if-else" + "\n");
 		
 		System.out.print("Input Letter: ");
@@ -145,7 +160,7 @@ public class DayOne {
 			System.out.println("\n" + "Letter is a Consonant" + "\n");
 	}
 	
-	public static void Problem6() {
+	public static void problem6() {
 		System.out.println("\n" + "Check Vowel w/ switch" + "\n");
 		
 		System.out.print("Input Letter: ");
@@ -164,7 +179,7 @@ public class DayOne {
 		}
 	}
 	
-	public static void Problem7() {
+	public static void problem7() {
 		System.out.println("\n" + "Check If Leap Year" + "\n");
 		
 		System.out.print("Input Year: ");
@@ -180,7 +195,7 @@ public class DayOne {
 		}
 	}
 	
-	public static void Problem8() {
+	public static void problem8() {
 		System.out.println("\n" + "Check + or - w/ if-else" + "\n");
 		
 		System.out.print("Input Integer: ");
@@ -194,7 +209,7 @@ public class DayOne {
 			System.out.println("\n" + "Number is Zero" + "\n");
 	}
 	
-	public static void Problem9() {
+	public static void problem9() {
 		System.out.println("\n" + "Print Primes Between Two Ints" + "\n");
 		
 		System.out.print("Input Positive #1: ");
@@ -231,7 +246,7 @@ public class DayOne {
 		return true;
 	}
 	
-	public static void Problem10() {
+	public static void problem10() {
 		System.out.println("\n" + "Calculate Power Using Recursion" + "\n");
 		
 		System.out.print("Input Base: ");
@@ -249,7 +264,7 @@ public class DayOne {
 			return 1;
 	}
 	
-	public static void Problem11() {
+	public static void problem11() {
 		System.out.println("\n" + "Count Vowels, Consonants, Digits, and Spaces " + "\n");
 		
 		int vCount = 0;
@@ -285,7 +300,7 @@ public class DayOne {
 								+ "Space Count: " + sCount + "\n");
 	}
 	
-	public static void Problem12() {
+	public static void problem12() {
 		Car testCar = new Car();
 		
 		System.out.println("\n" + "Car Name: " + testCar.getName() + "\n");
