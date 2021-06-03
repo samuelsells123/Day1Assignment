@@ -4,26 +4,13 @@ public class DayOne {
 	public static Scanner scan;
 	
 	public static void main(String[] args) {
+		printProblems();
+		
 		scan = new Scanner(System.in);
 		int select = 0;
 		
-		while(select != 13) {
-			System.out.println("Day 1 - Assignment:\r\n"
-					+ "-----------------------------------------------------\r\n"
-					+ "1. WAP to accept a isbn,name, author,price, no of copies printed from user and print them using method?\r\n"
-					+ "2. Compute Quotient and Remainder for provided number.\r\n"
-					+ "3. Swap two numbers using temporary variable\r\n"
-					+ "4.  Swap two numbers without using temporary variable\r\n"
-					+ "5. Check whether an alphabet is vowel or consonant using if..else statement\r\n"
-					+ "6. Check whether an alphabet is vowel or consonant using switch statement\r\n"
-					+ "7. Java Program to Check a Leap Year\r\n"
-					+ "8. Check if a Number is Positive or Negative using if else\r\n"
-					+ "9. Prime Numbers Between Two Integers\r\n"
-					+ "10.  Program to calculate power using recursion\r\n"
-					+ "11. Program to count vowels, consonants, digits, and spaces\r\n"
-					+ "12. Write a constructor in the Car class given below that initializes the brand class field with the string “Ford”." + "\n");
-			
-			System.out.print("Choose a problem from 1-12, or 13 to exit: ");
+		while(select != 14) {
+			System.out.print("Choose a problem from 1-12, 13 to print problems, or 14 to exit: ");
 			
 			select = scan.nextInt();
 			
@@ -65,6 +52,9 @@ public class DayOne {
 					DayOne.problem12();
 					break;
 				case 13:
+					printProblems();
+					break;
+				case 14:
 					System.out.println("\n" + "Exiting...");
 					break;
 				default:
@@ -73,6 +63,23 @@ public class DayOne {
 		}
 		
 		scan.close();
+	}
+	
+	public static void printProblems() {
+		System.out.println("Day 1 - Assignment:\r\n"
+				+ "-----------------------------------------------------\r\n"
+				+ "1. WAP to accept a isbn,name, author,price, no of copies printed from user and print them using method?\r\n"
+				+ "2. Compute Quotient and Remainder for provided number.\r\n"
+				+ "3. Swap two numbers using temporary variable\r\n"
+				+ "4.  Swap two numbers without using temporary variable\r\n"
+				+ "5. Check whether an alphabet is vowel or consonant using if..else statement\r\n"
+				+ "6. Check whether an alphabet is vowel or consonant using switch statement\r\n"
+				+ "7. Java Program to Check a Leap Year\r\n"
+				+ "8. Check if a Number is Positive or Negative using if else\r\n"
+				+ "9. Prime Numbers Between Two Integers\r\n"
+				+ "10.  Program to calculate power using recursion\r\n"
+				+ "11. Program to count vowels, consonants, digits, and spaces\r\n"
+				+ "12. Write a constructor in the Car class given below that initializes the brand class field with the string “Ford”." + "\n");
 	}
 	
 	public static void problem1() {
@@ -212,9 +219,9 @@ public class DayOne {
 	public static void problem9() {
 		System.out.println("\n" + "Print Primes Between Two Ints" + "\n");
 		
-		System.out.print("Input Positive #1: ");
+		System.out.print("Input First Positive Number: ");
 		int num1 = scan.nextInt();
-		System.out.print("Input Positive #2: ");
+		System.out.print("Input Second Positive Number: ");
 		int num2 = scan.nextInt();
 		
 		if(num1 >= 0 && num2 >= 0) {
@@ -225,7 +232,7 @@ public class DayOne {
 			}
 			
 			System.out.println();
-			for(int i = 2; i <= num2; i++) {
+			for(int i = num1+1; i < num2; i++) {
 				if(isPrime(i)) {
 					System.out.print(i + " ");
 				}
